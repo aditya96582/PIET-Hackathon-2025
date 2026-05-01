@@ -1,0 +1,7 @@
+project_id = "fypzyvofiqbkirgmiwyp"
+
+[functions.weather-api]
+verify_jwt = false
+
+[functions.gemini-crop-analysis]
+verify_jwt = false

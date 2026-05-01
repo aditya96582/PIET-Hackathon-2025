@@ -1,0 +1,365 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Brand Colors */
+    --deep-blue: 204 100% 14%;
+    --sky-blue: 195 100% 47%;
+    --bright-blue: 210 82% 55%;
+    --sea-green: 145 100% 33%;
+    --lime-green: 88 75% 44%;
+    
+    /* Agriculture & Nature Colors */
+    --fresh-leaf-green: 88 46% 33%;
+    --spring-green: 134 35% 56%;
+    --harvest-gold: 52 85% 57%;
+    --soil-brown: 25 68% 36%;
+    
+    /* Warm & Attention Colors */
+    --bright-orange: 32 94% 51%;
+    --mandarin-orange: 22 77% 56%;
+    --sunset-orange: 16 96% 56%;
+    --warm-yellow: 48 100% 50%;
+    --goldenrod: 42 91% 51%;
+    
+    /* UI Colors */
+    --charcoal-black: 0 0% 7%;
+    --graphite-gray: 0 0% 32%;
+    --light-gray: 0 0% 93%;
+    --off-white: 52 100% 98%;
+    
+    /* Alert Colors */
+    --bright-red: 0 100% 42%;
+    --soft-red: 0 99% 65%;
+    --amber: 45 100% 69%;
+    
+    /* Tailwind Variables */
+    --background: var(--off-white);
+    --foreground: var(--charcoal-black);
+    --card: 0 0% 100%;
+    --card-foreground: var(--charcoal-black);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--charcoal-black);
+    --primary: var(--deep-blue);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--light-gray);
+    --secondary-foreground: var(--charcoal-black);
+    --muted: var(--light-gray);
+    --muted-foreground: var(--graphite-gray);
+    --accent: var(--sky-blue);
+    --accent-foreground: 0 0% 100%;
+    --destructive: var(--bright-red);
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--light-gray);
+    --input: var(--light-gray);
+    --ring: var(--deep-blue);
+    --radius: 0.5rem;
+    --success: var(--sea-green);
+    --warning: var(--warm-yellow);
+    --info: var(--bright-blue);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --primary-glow: 142 76% 46%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142 76% 36%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    background: #ffffe0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Enhanced Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+  
+  h1 { @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl; }
+  h2 { @apply text-2xl sm:text-3xl lg:text-4xl; }
+  h3 { @apply text-xl sm:text-2xl lg:text-3xl; }
+  h4 { @apply text-lg sm:text-xl lg:text-2xl; }
+  
+  p, span, div {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+  
+  /* Mobile-first button enhancements */
+  button {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    touch-action: manipulation;
+    user-select: none;
+  }
+  
+  /* Enhanced focus states for accessibility */
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #00aeef;
+    outline-offset: 2px;
+  }
+}
+
+/* Mobile-First Responsive Utilities */
+@layer utilities {
+  /* Touch-friendly sizing */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Enhanced button styles */
+  .btn-primary {
+    background: linear-gradient(to right, #f5810f, #fa6721);
+    @apply text-white font-semibold;
+    @apply px-6 py-3 rounded-xl;
+    @apply shadow-lg hover:shadow-xl;
+    @apply transform hover:scale-105 active:scale-95;
+    @apply transition-all duration-200;
+    @apply touch-target;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/90 backdrop-blur-sm;
+    color: #002b45;
+    @apply font-semibold;
+    @apply px-6 py-3 rounded-xl;
+    border: 2px solid rgba(0, 43, 69, 0.2);
+    @apply shadow-md hover:shadow-lg;
+    @apply transform hover:scale-105 active:scale-95;
+    @apply transition-all duration-200;
+    @apply touch-target;
+  }
+  
+  /* Enhanced card styles */
+  .card-enhanced {
+    @apply bg-white/95 backdrop-blur-md;
+    @apply rounded-2xl shadow-xl;
+    @apply border border-white/20;
+    @apply transform hover:scale-[1.02];
+    @apply transition-all duration-300;
+  }
+  
+  /* Icon enhancements */
+  .icon-enhanced {
+    @apply drop-shadow-sm;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  }
+  
+  .icon-large {
+    @apply w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12;
+  }
+  
+  .icon-button {
+    @apply w-12 h-12 sm:w-14 sm:h-14;
+    @apply rounded-full;
+    @apply flex items-center justify-center;
+    @apply shadow-lg hover:shadow-xl;
+    @apply transform hover:scale-110 active:scale-95;
+    @apply transition-all duration-200;
+  }
+  
+  /* Typography enhancements */
+  .text-enhanced {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #002b45, #00aeef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Mobile navigation */
+  .mobile-nav {
+    @apply fixed bottom-0 left-0 right-0 z-50;
+    @apply bg-white/95 backdrop-blur-md;
+    @apply border-t border-gray-200;
+    @apply px-4 py-2;
+    @apply safe-area-inset-bottom;
+  }
+  
+  /* Responsive spacing */
+  .container-mobile {
+    @apply px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-7xl;
+  }
+  
+  /* Enhanced animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s infinite;
+  }
+  
+  /* Safe area support for mobile devices */
+  .safe-area-inset-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Enhanced glassmorphism */
+  .glass-card {
+    @apply bg-white/20 backdrop-blur-md;
+    @apply border border-white/30;
+    @apply shadow-2xl;
+  }
+  
+  /* Project Color Profile */
+  /* Text Colors */
+  .text-bright-orange { color: #f5810f; }
+  .text-mandarin-orange { color: #ec7d31; }
+  .text-sunset-orange { color: #fa6721; }
+  .text-warm-yellow { color: #ffc700; }
+  .text-goldenrod { color: #f4a30d; }
+  .text-light-gray { color: #ececec; }
+  .text-graphite-gray { color: #525252; }
+  .text-sky-blue { color: #00aeef; }
+  
+  /* Background Colors */
+  .bg-bright-orange { background-color: #f5810f; }
+  .bg-mandarin-orange { background-color: #ec7d31; }
+  .bg-sunset-orange { background-color: #fa6721; }
+  .bg-warm-yellow { background-color: #ffc700; }
+  .bg-light-yellow { background-color: #ffffe0; }
+  .bg-goldenrod { background-color: #f4a30d; }
+  .bg-light-gray { background-color: #ececec; }
+  .bg-graphite-gray { background-color: #525252; }
+  .bg-sky-blue { background-color: #00aeef; }
+  
+  /* Border Colors */
+  .border-bright-orange { border-color: #f5810f; }
+  .border-mandarin-orange { border-color: #ec7d31; }
+  .border-sunset-orange { border-color: #fa6721; }
+  .border-warm-yellow { border-color: #ffc700; }
+  .border-goldenrod { border-color: #f4a30d; }
+  .border-light-gray { border-color: #ececec; }
+  .border-graphite-gray { border-color: #525252; }
+  .border-sky-blue { border-color: #00aeef; }
+  
+  /* Hover States */
+  .hover\:bg-bright-orange:hover { background-color: #f5810f; }
+  .hover\:bg-mandarin-orange:hover { background-color: #ec7d31; }
+  .hover\:bg-sunset-orange:hover { background-color: #fa6721; }
+  .hover\:bg-warm-yellow:hover { background-color: #ffc700; }
+  .hover\:bg-goldenrod:hover { background-color: #f4a30d; }
+  .hover\:bg-sky-blue:hover { background-color: #00aeef; }
+  .hover\:text-white:hover { color: #ffffff; }
+}
+
+/* CSS Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    font-size: 16px;
+  }
+  
+  .mobile-card {
+    @apply mx-2 rounded-xl shadow-lg;
+  }
+  
+  .mobile-button {
+    @apply py-4 px-6 text-lg font-semibold rounded-xl;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,36 @@
+/* Kisan Sathi Digital Bharat - Color System */
+
+:root {
+  /* Primary Brand Colors */
+  --deep-blue: #002b45;
+  --sky-blue: #00aeef;
+  --bright-blue: #2d99ec;
+  --sea-green: #00a650;
+  --lime-green: #61cc1d;
+
+  /* Agriculture & Nature Colors */
+  --fresh-leaf-green: #4d7d2e;
+  --spring-green: #66ba6e;
+  --harvest-gold: #efd133;
+  --soil-brown: #9e561f;
+
+  /* Warm & Attention Colors */
+  --bright-orange: #f5810f;
+  --mandarin-orange: #ec7d31;
+  --sunset-orange: #fa6721;
+  --warm-yellow: #ffc700;
+  --goldenrod: #f4a30d;
+
+  /* UI Neutral Colors */
+  --charcoal-black: #131313;
+  --graphite-gray: #525252;
+  --light-gray: #ececec;
+  --off-white: #fffdf6;
+  --pure-white: #ffffff;
+
+  /* Highlight & Alert Colors */
+  --bright-red: #d50000;
+  --soft-red: #fe5050;
+  --peach: #f9c6aa;
+  --amber: #ffd064;
+}
